@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elsaid Maher · Flutter Developer</title>
+<meta name="description" content="Elsaid Maher — Flutter developer from Egypt. Clean Architecture, Bloc/Cubit and Firebase.">
+<meta name="theme-color" content="#FAF8F5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231c1b19'/%3E%3Ctext x='16' y='21' font-size='13' text-anchor='middle' fill='%23faf8f5' font-family='sans-serif'%3EEM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav"><div class="wrap">
+ <a href="#top" class="logo"><i>EM</i>Elsaid Maher</a>
+ <nav class="links"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+ <div class="nav-r"><button class="icon-btn" id="theme" aria-label="Toggle theme">◐</button><a class="btn btn-dark btn-sm" href="#contact">Hire me</a></div>
+</div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+ <div>
+  <div class="pill"><b></b>Open to internships &amp; junior Flutter roles</div>
+  <div class="hi">Hi, I’m Elsaid Maher</div>
+  <h1>I build <span class="grad-text">clean, scalable</span> Flutter apps.</h1>
+  <p class="lede">Computer Science graduate (Damietta University, 2026) focused on Clean Architecture, Bloc/Cubit and Firebase. I turn Figma designs into working, well-structured mobile apps. CitiFix, my graduation project, is the biggest one.</p>
+  <div class="cta"><a class="btn btn-grad" href="#projects">View projects</a><a class="btn btn-line" href="#contact">Get in touch</a></div>
+  <div class="stats"><div class="stat"><strong>5</strong><span>Cross-platform apps</span></div><div class="stat"><strong>2</strong><span>Roles in CitiFix</span></div><div class="stat"><strong>AR / EN</strong><span>RTL localization</span></div></div>
+ </div>
+ <div class="portrait"><img src="assets/photo.jpg" alt="Portrait of Elsaid Maher" onerror="this.onerror=null;this.src='https://github.com/elsaidmaher2-10.png'"><span class="badge b1">flutter_bloc</span><span class="badge b2">Clean Architecture</span></div>
+</div></section>
+<div class="marquee" aria-label="Technologies"><div class="track" id="track"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Bloc / Cubit</span><span class="chip">Clean Architecture</span><span class="chip">Firebase</span><span class="chip">REST · Dio</span><span class="chip">Hive</span><span class="chip">SQLite</span><span class="chip">get_it</span><span class="chip">go_router</span><span class="chip">Provider</span><span class="chip">Figma</span><span class="chip">Git &amp; GitHub</span></div></div>
+
+<section id="projects"><div class="wrap">
+ <div class="eyebrow">Projects</div><h2 class="sec-title">Selected work</h2>
+ <p class="sec-sub">Real apps built end to end. Each one shows what I built and how I structured it.</p>
+
+ <article class="proj rv"><div>
+  <span class="tag">DUAL-ROLE · FEATURED</span><h3>CitiFix</h3>
+  <p>A Flutter app that connects citizens with city maintenance teams. Citizens report issues with photos and location; workers receive, navigate to and resolve them, then export a PDF report.</p>
+  <ul><li>Citizen and worker experiences from one codebase, routed by an AppRole switch</li><li>Auth with OTP verification, tokens in secure storage</li><li>Map-based location picking and navigation to the issue site</li><li>Push notifications via FCM and PDF generation from completed tasks</li><li>Arabic / English localization</li></ul>
+  <div class="tech"><span>Flutter</span><span>Cubit</span><span>get_it</span><span>Firebase</span><span>dio</span><span>flutter_map</span><span>FCM</span><span>pdf</span></div>
+  <a class="btn btn-dark btn-sm" href="https://github.com/elsaidmaher2-10/CitiFix" target="_blank" rel="noopener">View on GitHub ↗</a>
+ </div><div class="proj-media">
+  <img src="https://assets.macaly-user-data.dev/cdn-cgi/image/format=webp,width=1200,fit=scale-down,quality=90/gtgjfim7lbcbf4gwk4kz9kgw/bbqmm0pfeejwqkkg8dfpsn7f/dlFrADVhS3Za6y4aBlTGZ.png" alt="CitiFix cover" loading="lazy">
+  <div class="shots2"><img src="https://assets.macaly-user-data.dev/cdn-cgi/image/format=webp,width=1200,fit=scale-down,quality=90/gtgjfim7lbcbf4gwk4kz9kgw/bbqmm0pfeejwqkkg8dfpsn7f/xuJhMYWL7AQgNLbJfzVka.png" alt="Citizen reporting screen" loading="lazy"><img src="https://assets.macaly-user-data.dev/cdn-cgi/image/format=webp,width=1200,fit=scale-down,quality=90/gtgjfim7lbcbf4gwk4kz9kgw/bbqmm0pfeejwqkkg8dfpsn7f/C82Iip_WNDCHOzBOztfiW.png" alt="Worker field operations screen" loading="lazy"></div>
+ </div></article>
+
+ <article class="proj flip rv"><div>
+  <span class="tag">CLEAN ARCHITECTURE</span><h3>AnimoApp</h3>
+  <p>Discover and browse animals with OTP login and category filtering, layered into domain, data and presentation.</p>
+  <ul><li>Dedicated Cubits for OTP, animal list and category filter</li><li>Functional error handling with dartz Either</li><li>Token persistence with SharedPreferences</li></ul>
+  <div class="tech"><span>Flutter</span><span>Cubit</span><span>get_it</span><span>dio</span><span>dartz</span><span>screenutil</span></div>
+  <div class="cta"><a class="btn btn-grad btn-sm" href="https://elsaidmaher2-10.github.io/animoapp/" target="_blank" rel="noopener">Live demo ↗</a><a class="btn btn-line btn-sm" href="https://github.com/elsaidmaher2-10/animoapp" target="_blank" rel="noopener">GitHub ↗</a></div>
+ </div><div class="proj-media">
+  <div class="shots2"><img src="https://raw.githubusercontent.com/elsaidmaher2-10/animoapp/master/demo/screenshots/04_login_screen.png" alt="Login screen" loading="lazy"><img src="https://raw.githubusercontent.com/elsaidmaher2-10/animoapp/master/demo/screenshots/06_otp_screen.png" alt="OTP screen" loading="lazy"><img src="https://raw.githubusercontent.com/elsaidmaher2-10/animoapp/master/demo/screenshots/01_desktop_home.png" alt="Home screen" loading="lazy"><img src="https://raw.githubusercontent.com/elsaidmaher2-10/animoapp/master/demo/screenshots/03_see_all_categories.png" alt="Categories screen" loading="lazy"></div>
+  <iframe class="demo" title="AnimoApp live demo" src="https://elsaidmaher2-10.github.io/animoapp/" loading="lazy"></iframe>
+ </div></article>
+
+ <article class="proj one rv"><div>
+  <span class="tag">API · OFFLINE</span><h3>NewsApp</h3>
+  <p>A news reader with accounts, category feeds, in-app search and bookmarks that stay available offline.</p>
+  <ul><li>Top headlines and trending sections</li><li>Hive-backed bookmark repository</li><li>Onboarding and editable profile with image picking</li></ul>
+  <div class="tech"><span>Flutter</span><span>Provider</span><span>http</span><span>Hive</span><span>cached_network_image</span></div>
+  <a class="btn btn-line btn-sm" href="https://github.com/elsaidmaher2-10/news" target="_blank" rel="noopener">GitHub ↗</a>
+ </div></article>
+
+ <h3 class="other-title">Other projects</h3>
+ <div class="other">
+  <a class="oc rv" href="https://github.com/elsaidmaher2-10/tasky" target="_blank" rel="noopener"><strong>Tasky</strong><p>Task manager with due dates, priorities, Hive persistence and light/dark mode.</p><em>GitHub ↗</em></a>
+  <a class="oc rv" href="https://github.com/elsaidmaher2-10/NotesApp" target="_blank" rel="noopener"><strong>NotesApp</strong><p>Offline notes with Hive and one focused Cubit per action.</p><em>GitHub ↗</em></a>
+  <a class="oc rv" href="https://github.com/elsaidmaher2-10/basketball_counter_app" target="_blank" rel="noopener"><strong>Basketball Counter</strong><p>My first hands-on practice with Cubit state management.</p><em>GitHub ↗</em></a>
+  <a class="oc rv" href="https://github.com/elsaidmaher2-10/bookly" target="_blank" rel="noopener"><strong>Bookly</strong><p>Book browsing app with a modular core/features structure and a themed UI on Android, iOS, web and desktop.</p><em>GitHub ↗</em></a>
+ </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+ <div class="eyebrow">Experience</div><h2 class="sec-title">Where I’ve built and learned</h2>
+ <p class="sec-sub">No formal employment yet. My experience comes from shipping real Flutter apps end to end.</p>
+ <div class="timeline">
+  <div class="tl rv"><small>Present · Project-based</small><h3>Flutter projects &amp; practice</h3><ul><li>Built CitiFix, a dual-role app with Cubit, get_it, Firebase messaging, maps and PDF reports.</li><li>Practiced REST integration with Dio, Firebase auth and Firestore, and local persistence with Hive and SQLite.</li><li>Revisiting older code as I learn better ways to structure it.</li></ul></div>
+  <div class="tl rv"><small>Damietta University · Graduated 2026</small><h3>Bachelor’s, Computer Science / Information Technology</h3><ul><li>Track: Flutter Mobile Development.</li><li>Graduation project: CitiFix, a dual-role citizen and worker platform.</li></ul></div>
+ </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+ <div class="eyebrow">Skills</div><h2 class="sec-title">What I work with</h2>
+ <p class="sec-sub">This reflects where I am now, not a claim to senior-level expertise.</p>
+ <div class="skills"><div class="sk rv"><h3>Mobile</h3><ul><li>Flutter</li><li>Dart</li><li>Material Design</li><li>Cupertino</li><li>Responsive UI</li><li>Arabic / English (RTL)</li></ul></div><div class="sk rv"><h3>Architecture</h3><ul><li>Clean Architecture</li><li>MVVM</li><li>Repository pattern</li><li>Feature-based structure</li><li>get_it (DI)</li></ul></div><div class="sk rv"><h3>State management</h3><ul><li>Bloc / Cubit</li><li>Provider</li><li>GetX</li></ul></div><div class="sk rv"><h3>Backend &amp; data</h3><ul><li>RESTful APIs</li><li>Dio</li><li>Firebase</li><li>Google Maps SDK</li><li>Secure authentication (OTP)</li></ul></div><div class="sk rv"><h3>Local storage</h3><ul><li>Hive</li><li>SQLite / sqflite</li><li>SharedPreferences</li><li>Secure storage</li></ul></div><div class="sk rv"><h3>Tools</h3><ul><li>Git &amp; GitHub</li><li>Postman</li><li>Figma</li><li>Android Studio</li><li>VS Code</li></ul></div></div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+ <div class="rv"><img src="assets/photo.jpg" alt="Elsaid Maher" onerror="this.onerror=null;this.src='https://github.com/elsaidmaher2-10.png'"></div>
+ <div class="rv"><div class="eyebrow">About me</div><h2 class="sec-title">I care about code that stays easy to change.</h2>
+  <p>I’m a Computer Science graduate (2026) from Damietta University, Egypt, specializing in Flutter. I like taking an idea or a Figma screen and turning it into a working, tested piece of software.</p>
+  <p>My goal is to become a professional Flutter developer building scalable, production-ready apps, so I focus on architecture, state management, API and Firebase integration, and clean structure over just getting a screen to render.</p>
+  <div class="langs"><span class="chip">Based in Damietta, Egypt</span><span class="chip">Arabic · native</span></div></div>
+</div></section>
+
+<section id="contact" style="padding-top:0"><div class="wrap"><div class="contact rv">
+ <div class="eyebrow">Contact</div><h2>Let’s build your next app.</h2>
+ <p>Open to internships, junior Flutter roles and freelance projects. Send a message and I’ll get back to you.</p>
+ <div class="email-row"><a class="btn btn-light" href="mailto:elsaidmaher@students.du.edu.eg">elsaidmaher@students.du.edu.eg</a><button class="btn btn-line" id="copy" data-email="elsaidmaher@students.du.edu.eg">Copy email</button></div>
+ <div class="email-row"><a class="btn btn-line btn-sm" href="https://wa.me/201023623040" target="_blank" rel="noopener">WhatsApp +20 102 362 3040</a><a class="btn btn-line btn-sm" href="https://www.linkedin.com/in/elsaid-maher-270307387" target="_blank" rel="noopener">LinkedIn ↗</a><a class="btn btn-line btn-sm" href="https://github.com/elsaidmaher2-10" target="_blank" rel="noopener">GitHub ↗</a></div>
+</div></div></section>
+</main>
+<footer>© <span id="year">2026</span> Elsaid Maher · Press <span class="mono">r</span> for hot reload</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+<script src="script.js"></script>
+</body>
+</html>
