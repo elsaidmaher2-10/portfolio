@@ -84,3 +84,21 @@ footer{text-align:center;color:var(--mute);font-size:13px;padding:0 0 40px}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.track,.badge,.pill b{animation:none}}
 @media (max-width:900px){.links{display:none}section{padding:72px 0}.hero-grid,.proj,.about{grid-template-columns:1fr}.proj.flip .proj-media{order:0}.skills,.other{grid-template-columns:1fr}.portrait{order:-1}.contact{padding:44px 22px}}
+
+.portrait canvas{position:absolute;inset:-70px;width:calc(100% + 140px);height:calc(100% + 140px);z-index:3;pointer-events:none}
+.hint{position:absolute;left:0;right:0;bottom:-36px;text-align:center;margin:0;font-size:12.5px;color:var(--mute);font-family:'IBM Plex Mono',monospace}
+.hero{padding-bottom:110px}
+.modal{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.55);display:grid;place-items:center;padding:20px}
+.modal[hidden]{display:none}
+.modal-box{background:var(--card);border:1px solid var(--line);border-radius:20px;width:min(860px,100%);height:min(88vh,1000px);display:flex;flex-direction:column;overflow:hidden}
+.modal-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.modal-actions{display:flex;gap:10px;align-items:center}
+#cvFrame{flex:1;width:100%;border:0;background:var(--bg2)}
+html[lang="ar"] body,html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] .logo{font-family:'IBM Plex Sans Arabic','IBM Plex Sans',system-ui,sans-serif;letter-spacing:0}
+html[dir="rtl"] .timeline{padding-left:0;padding-right:34px}
+html[dir="rtl"] .timeline::before{left:auto;right:7px}
+html[dir="rtl"] .tl::before{left:auto;right:-34px}
+html[dir="rtl"] .proj li,html[dir="rtl"] .tl li{padding-left:0;padding-right:20px}
+html[dir="rtl"] .proj li::before,html[dir="rtl"] .tl li::before{left:auto;right:0}
+html[dir="rtl"] .shots2,html[dir="rtl"] .tech,html[dir="rtl"] .mono,html[dir="rtl"] .track{direction:ltr}
+@media (max-width:900px){.portrait canvas{inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px)}}

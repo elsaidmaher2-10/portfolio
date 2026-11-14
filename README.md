@@ -9,5 +9,8 @@ Open `index.html` in a browser.
 Repo **Settings → Pages → Deploy from a branch → `main` / `(root)`**.
 Site URL: `https://elsaidmaher2-10.github.io/portfolio/`
 
+## Add your CV
+Put your CV at `assets/Elsaid-Maher-CV.pdf`. The **CV** button in the nav opens it in a preview window with a download button.
+
 ## Add your photo
 Put your portrait at `assets/photo.jpg` (4:5 ratio works best). Until then the site shows your GitHub avatar.
