@@ -34,8 +34,28 @@
   if(lang==='ar')applyLang('ar');
 
   /* CV modal */
+  var CV_ID='PASTE_FILE_ID_HERE'; // Google Drive file ID (from the Apps Script setup() log)
+  var hasDrive=CV_ID!=='PASTE_FILE_ID_HERE';
+  var CV_PREVIEW='https://drive.google.com/file/d/'+CV_ID+'/preview';
+  var CV_DOWNLOAD='https://drive.google.com/uc?export=download&id='+CV_ID;
+  var CV_LOCAL=new URL('Elsaid-Maher-CV.pdf',document.baseURI).href; // fallback (GitHub Pages)
+
   var modal=$('#cvModal'),frame=$('#cvFrame');
-function openCV(){frame.src=new URL('Elsaid-Maher-CV.pdf',document.baseURI).href;modal.hidden=false}  function closeCV(){modal.hidden=true;frame.src='about:blank'}
+
+  function openCV(){
+    frame.src=hasDrive?CV_PREVIEW:CV_LOCAL;
+    modal.hidden=false;
+  }
+
+  function closeCV(){
+    modal.hidden=true;
+    frame.src='about:blank';
+  }
+
+  // Point the "Download PDF" button at Drive (adjust selector to match your HTML)
+  var dl=document.querySelector('#cvDownload, #cvModal a[download]');
+  if(dl){dl.href=hasDrive?CV_DOWNLOAD:CV_LOCAL}
+
   $('#cvBtn').addEventListener('click',openCV);
   $('#cvClose').addEventListener('click',closeCV);
   modal.addEventListener('click',function(e){if(e.target===modal)closeCV()});
@@ -49,7 +69,7 @@ function openCV(){frame.src=new URL('Elsaid-Maher-CV.pdf',document.baseURI).href
     r.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
     var scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(45,1,.1,100);cam.position.z=9;
     scene.add(new THREE.AmbientLight(0xffffff,.75));
-    var dl=new THREE.DirectionalLight(0xffffff,.9);dl.position.set(3,4,5);scene.add(dl);
+    var dl2=new THREE.DirectionalLight(0xffffff,.9);dl2.position.set(3,4,5);scene.add(dl2);
     var defs=[
       [new THREE.IcosahedronGeometry(.62,0),0x0d9373,-2.7,2.5],
       [new THREE.TorusGeometry(.5,.18,16,40),0x2563eb,2.8,1.4],
