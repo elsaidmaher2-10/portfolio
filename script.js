@@ -35,7 +35,7 @@
 
   /* CV modal */
   var modal=$('#cvModal'),frame=$('#cvFrame');
-  function openCV(){frame.src='assets/Elsaid-Maher-CV.pdf';modal.hidden=false}
+  function openCV(){frame.src='Elsaid-Maher-CV.pdf';modal.hidden=false}
   function closeCV(){modal.hidden=true;frame.src='about:blank'}
   $('#cvBtn').addEventListener('click',openCV);
   $('#cvClose').addEventListener('click',closeCV);
